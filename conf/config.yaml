@@ -1,0 +1,39 @@
+excutor: 四川芬达
+batch_num: 2
+conf:
+  use_mock: true
+  clean_before_test: false
+  clean_after_test: false
+  send_email: false
+  send_DD: false
+file:
+  pre_data: base/precon.yaml
+  batch_data:
+  - - single
+    - data/singleAPI
+  - - workflow
+    - data/workflowAPI
+  extract:
+    fpath: extract.yaml
+  allure:
+    tmp_dir: report/temp
+    pers_dir: report/allure_report
+api:
+  base_url: http://127.0.0.1:8787
+  timeout: 60
+mock:
+  host: 127.0.0.1
+  port: 8181
+logs:
+  folder: logs
+  level: DEBUG
+  stream_level: DEBUG
+  file_max_bytes: 5242880
+  file_backup_count: 5
+  rentention_days: 30
+MySql:
+  host: 127.0.0.1
+  port: 3306
+  user: root
+  password: '123456'
+  database: test_db

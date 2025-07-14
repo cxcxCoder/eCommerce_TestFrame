@@ -1,0 +1,74 @@
+- baseInfo:
+    api_name: 购物车添加商品接口
+    preconditions: 
+      - 'goodsList'
+    url: /coupApply/cms/shoppingJoinCart
+    method: POST
+    headers:
+      Content-Type: application/json;charset=UTF-8
+
+  testCase:
+    - case_name: 正常添加商品
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        count: 2
+        price: '128'
+        timeStamp: 2169232689
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - contains: { 'error_code': '0000' }
+
+    - case_name: 有效添加-缺少非必须参数timeStamp
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        count: 2
+        price: '128'
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - contains: { 'error_code': '0000' }
+
+    - case_name: 无效添加-缺少必须参数goods_id
+      json:
+        count: 2
+        price: '128'
+        timeStamp: 2169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - contains: { 'error_code': '9001' }
+
+    - case_name: 无效添加-缺少必须参数count
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        price: '128'
+        timeStamp: 2169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - contains: { 'error_code': '9001' }
+
+    - case_name: 无效添加-缺少必须参数price
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        count: 2
+        timeStamp: 2169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - contains: { 'error_code': '9001' }
+
+    - case_name: 无效添加-必须参数goods_id错误
+      json:
+        goods_id: "1"
+        count: 2
+        price: '128'
+        timeStamp: 2169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - contains: { 'error_code': '4000' }
+
+
+

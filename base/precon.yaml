@@ -1,0 +1,58 @@
+login: 
+  baseInfo:
+    api_name: 用户登录
+    max_call: 1
+    url: /dar/user/login
+    method: post
+    headers:
+      Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+  testCase:
+    case_name: 用户名和密码正确登录验证
+    data:
+      user_name: test01
+      passwd: admin123
+    extract:
+      token: $.token
+
+goodsList:
+  baseInfo:
+    api_name: 获取商品列表接口
+    max_call: 1
+    url: /coupApply/cms/goodsList
+    method: GET
+    headers:
+      Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+  testCase:
+    case_name: 正常获取商品列表
+    params:
+      msgType: getHandsetListOfCust
+      page: 1
+      size: 20
+    extract_list:
+      goodsList: $.goodsList[*].goodsId
+
+placeAnOrder:
+  baseInfo:
+    api_name: 提交订单接口
+    max_call: 0
+    url: /coupApply/cms/placeAnOrder
+    method: POST
+    headers:
+      Content-Type: application/json;charset=UTF-8
+  testCase:
+    case_name: 正常提交订单
+    json:
+      goods_id: '18382788819'
+      number: 2
+      propertyChildIds: "2:9"
+      inviter_id: 127839112
+      price: "128"
+      freight_insurance: "0.00"
+      discount_code: "002399"
+      consignee_info:
+        name: "张三"
+        phone: 13800000000
+        address: "北京市海淀区西三环北路74号院4栋3单元1008"
+    extract:
+      orderNumber: $..orderNumber
+      userId: $..userId

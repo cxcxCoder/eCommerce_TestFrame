@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<environment>
+  <parameter>
+    <key>excuter</key>
+    <value>四川芬达</value>
+    </parameter>
+  <parameter>
+    <key>excute_time</key>
+    <value>2025-07-11 14:53:02</value>
+    </parameter>
+  <parameter>
+    <key>OS</key>
+    <value>Windows 10 10.0.26100</value>
+    </parameter>
+  <parameter>
+    <key>Platform</key>
+    <value>Windows-10-10.0.26100-SP0</value>
+    </parameter>
+  <parameter>
+    <key>Python Version</key>
+    <value>3.9.21</value>
+    </parameter>
+  <parameter>
+    <key>Base URL</key>
+    <value>http://127.0.0.1:8787</value>
+    </parameter>
+  </environment>

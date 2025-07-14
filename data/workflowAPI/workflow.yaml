@@ -1,0 +1,48 @@
+descrip:
+  feature_name: 业务流程
+  story_name: 提交订单-支付订单
+steps:
+  - baseInfo:
+      api_name: 提交订单接口
+      url: /coupApply/cms/placeAnOrder
+      method: POST
+      headers:
+        Content-Type: application/json;charset=UTF-8
+    testCase:
+      case_name: 正常提交订单
+      json:
+        goods_id: '18382788819'
+        number: 2
+        propertyChildIds: "2:9"
+        inviter_id: 127839112
+        price: "128"
+        freight_insurance: "0.00"
+        discount_code: "002399"
+        consignee_info:
+          name: "张三"
+          phone: 13800000000
+          address: "北京市海淀区西三环北路74号院4栋3单元1008"
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '0000' }
+      extract:
+        orderNumber: $..orderNumber
+        userId: $..userId
+
+  - baseInfo:
+      api_name: 订单支付接口
+      url: /coupApply/cms/orderPay
+      method: POST
+      headers:
+        Content-Type: application/json;charset=UTF-8
+    testCase:
+      case_name: 正常支付订单
+      json:
+        orderNumber: ${get_extract_data('orderNumber')}
+        userId: ${get_extract_data('userId')}
+        timeStamp: 169232689
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '0000' }

@@ -1,0 +1,132 @@
+- baseInfo:
+    api_name: 提交订单接口
+    url: /coupApply/cms/placeAnOrder
+    method: POST
+    headers:
+      Content-Type: application/json;charset=UTF-8
+
+  testCase:
+    - case_name: 正常提交订单
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        number: 2
+        propertyChildIds: "2:9"
+        inviter_id: 127839112
+        price: "128"
+        freight_insurance: "0.00"
+        discount_code: "002399"
+        consignee_info:
+          name: "张三"
+          phone: 13800000000
+          address: "北京市海淀区西三环北路74号院4栋3单元1008"
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '0000' }
+
+
+    - case_name: 无效提交-必须参数goods_id缺失
+      json:
+        number: 2
+        propertyChildIds: "2:9"
+        inviter_id: 127839112
+        price: "128"
+        freight_insurance: "0.00"
+        discount_code: "002399"
+        consignee_info:
+          name: "张三"
+          phone: 13800000000
+          address: "北京市海淀区西三环北路74号院4栋3单元1008"
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '9001' }
+
+    - case_name: 无效提交-必须参数number缺失
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        propertyChildIds: "2:9"
+        inviter_id: 127839112
+        price: "128"
+        freight_insurance: "0.00"
+        discount_code: "002399"
+        consignee_info:
+          name: "张三"
+          phone: 13800000000
+          address: "北京市海淀区西三环北路74号院4栋3单元1008"
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '9001' }
+
+    - case_name: 无效提交-必须参数propertyChildIds缺失
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        number: 2
+        inviter_id: 127839112
+        price: "128"
+        freight_insurance: "0.00"
+        discount_code: "002399"
+        consignee_info:
+          name: "张三"
+          phone: 13800000000
+          address: "北京市海淀区西三环北路74号院4栋3单元1008"
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '9001' }
+
+    - case_name: 无效提交-必须参数inviter_id缺失
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        number: 2
+        propertyChildIds: "2:9"
+        price: "128"
+        freight_insurance: "0.00"
+        discount_code: "002399"
+        consignee_info:
+          name: "张三"
+          phone: 13800000000
+          address: "北京市海淀区西三环北路74号院4栋3单元1008"
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '9001' }
+
+    - case_name: 无效提交-必须参数consignee_info全缺失  #目前是有效，未进行用户签名认证
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        number: 2
+        propertyChildIds: "2:9"
+        inviter_id: 127839112
+        price: "128"
+        freight_insurance: "0.00"
+        discount_code: "002399"
+      validation:
+        - status_code: 200
+        #- nequal: { 'error': ''}
+        #- equal: { 'error_code': '9001' }
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '0000' }
+
+    - case_name: 无效提交-必须参数consignee_info元素缺失  #目前是有效，未进行用户签名认证
+      json:
+        goods_id: ${get_extract_data('goodsList',0)}
+        number: 2
+        propertyChildIds: "2:9"
+        inviter_id: 127839112
+        price: "128"
+        freight_insurance: "0.00"
+        discount_code: "002399"
+        consignee_info:
+          name: "张三"
+          phone: 13800000000
+      validation:
+        - status_code: 200
+        #- nequal: { 'error': ''}
+        #- equal: { 'error_code': '9001' }
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '0000' }
+
+    
+

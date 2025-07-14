@@ -1,0 +1,47 @@
+- baseInfo:
+    api_name: 购物车删除商品接口
+    preconditions: 
+      - 'goodsList'
+    url: /coupApply/cms/delCart
+    method: POST
+    headers:
+      Content-Type: application/x-www-form-urlencoded 
+
+  testCase:
+    - case_name: 正常删除商品
+      data:
+        productId: ${get_extract_data('goodsList',0)}
+        timeStamp: 2169232689
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - contains: { 'error_code': '0000' }
+
+    - case_name: 有效删除-非必须参数timeStamp缺失
+      data:
+        productId: ${get_extract_data('goodsList',0)}
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - contains: { 'error_code': '0000' }
+
+    - case_name: 无效删除-必须参数productId缺失
+      data:
+        timeStamp: 2169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - contains: { 'error_code': '9001' }
+
+    - case_name: 无效删除-必须参数productId错误
+      data:
+        productId: "1"
+        timeStamp: 2169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - contains: { 'error_code': '4000' }
+
+
+
+

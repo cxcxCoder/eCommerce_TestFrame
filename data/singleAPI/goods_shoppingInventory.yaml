@@ -1,0 +1,68 @@
+- baseInfo:
+    api_name: 校验商品库存
+    preconditions: 
+      - 'goodsList'
+    url: /coupApply/cms/shoppingInventory
+    method: POST
+    headers:
+      Content-Type: application/json;charset=UTF-8
+
+  testCase:
+    - case_name: 正常校验商品库存
+      json:
+        goodsId: ${get_extract_data('goodsList',0)}
+        count: 1
+        timeStamp: 20
+      validation:
+        - status_code: 200
+        - equal: { 'error_code': '0000' }
+        - equal: { 'error': ''}
+
+    - case_name: 有效校验-库存不足
+      json:
+        goodsId: ${get_extract_data('goodsList',0)}
+        count: 600
+        timeStamp: 20
+      validation:
+        - status_code: 200
+        - equal: { 'error_code': '0000' }
+        - nequal: { 'error': ''}
+
+    - case_name: 有效校验-非必须参数timeStamp缺失
+      json:
+        goodsId: ${get_extract_data('goodsList',0)}
+        count: 1
+      validation:
+        - status_code: 200
+        - equal: { 'error_code': '0000' }
+        - equal: { 'error': ''}
+
+    - case_name: 无效校验-必须参数goodsId缺失
+      json:
+        count: 1
+        timeStamp: 20
+      validation:
+        - status_code: 200
+        - equal: { 'error_code': '9001' }
+        - nequal: { 'error': ''}
+
+    - case_name: 无效校验-必须参数count缺失
+      json:
+        goodsId: ${get_extract_data('goodsList',0)}
+        timeStamp: 20
+      validation:
+        - status_code: 200
+        - equal: { 'error_code': '9001' }
+        - nequal: { 'error': ''}
+
+    - case_name: 无效校验-不存在对应商品
+      json:
+        goodsId: "01"
+        count: 1
+        timeStamp: 20
+      validation:
+        - status_code: 200
+        - equal: { 'error_code': '4000' }
+        - nequal: { 'error': ''}
+
+

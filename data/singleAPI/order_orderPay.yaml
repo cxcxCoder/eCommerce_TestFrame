@@ -1,0 +1,69 @@
+- baseInfo:
+    api_name: 订单支付接口
+    preconditions: 
+      - 'placeAnOrder'
+    url: /coupApply/cms/orderPay
+    method: POST
+    headers:
+      Content-Type: application/json;charset=UTF-8
+
+  testCase:
+    - case_name: 正常支付订单
+      json:
+        orderNumber: ${get_extract_data('orderNumber')}
+        userId: ${get_extract_data('userId')}
+        timeStamp: 169232689
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '0000' }
+
+    - case_name: 有效支付-非必须参数timeStamp缺失
+      json:
+        orderNumber: ${get_extract_data('orderNumber')}
+        userId: ${get_extract_data('userId')}
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '0000' }
+
+    - case_name: 无效支付-必须参数orderNumber缺失
+      json:
+        userId: ${get_extract_data('userId')}
+        timeStamp: 169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '9001' }
+
+    - case_name: 无效支付-必须参数userId缺失
+      json:
+        orderNumber: ${get_extract_data('orderNumber')}
+        timeStamp: 169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '9001' }
+
+    - case_name: 无效支付-必须参数orderNumber错误
+      json:
+        orderNumber: "0001"
+        userId: ${get_extract_data('userId')}
+        timeStamp: 169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '4000' }
+
+    - case_name: 无效支付-必须参数userId错误
+      json:
+        orderNumber: ${get_extract_data('orderNumber')}
+        userId: "3331"
+        timeStamp: 169232689
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '4000' }
+
+    
+

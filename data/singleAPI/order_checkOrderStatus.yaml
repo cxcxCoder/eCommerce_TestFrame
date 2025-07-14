@@ -1,0 +1,47 @@
+- baseInfo:
+    api_name: 校验商品订单状态接口
+    preconditions: 
+      - 'placeAnOrder'
+    url: /coupApply/cms/checkOrderStatus
+    method: POST
+    headers:
+      Content-Type: application/json;charset=UTF-8 
+
+  testCase:
+    - case_name: 正常校验已支付订单状态
+      json:
+        orderNumber: ${get_extract_data('orderNumber')}
+        timeStamp: 2
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '' }
+        - equal: { 'status': '0' }
+
+    - case_name: 有效校验-非必须参数timeStamp缺失
+      json:
+        orderNumber: ${get_extract_data('orderNumber')}
+      validation:
+        - status_code: 200
+        - equal: { 'error': ''}
+        - equal: { 'error_code': '' }
+        - equal: { 'status': '0' }
+
+    - case_name: 无效校验-必须参数orderNumber缺失
+      json:
+        timeStamp: 2
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '4000' }
+
+    - case_name: 无效校验-订单号不存在
+      json:
+        orderNumber: "2"
+        timeStamp: 2
+      validation:
+        - status_code: 200
+        - nequal: { 'error': ''}
+        - equal: { 'error_code': '4000' }
+  
+    
