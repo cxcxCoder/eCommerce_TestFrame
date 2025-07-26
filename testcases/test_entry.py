@@ -1,5 +1,6 @@
 import allure
 import pytest
+import uuid
 from base.requestBase import RequestBase
 """
 测试执行入口,pytest通过命令执行后,pytest_generate_tests根据配置载入参数化yaml测试用例数据
@@ -22,6 +23,9 @@ def test_single(single_case_data):
     allure.dynamic.story(base_info['api_name'])
     allure.dynamic.title(test_case['case_name'])
 
+    #人为动态分配uuid
+    allure.dynamic.id(str(uuid.uuid4()))
+
     #执行测试用例
     RequestBase().excute_test(base_info,test_case)
 
@@ -37,6 +41,8 @@ def test_workflow(workflow_case_data):
     
     allure.dynamic.feature(descrip['feature_name'])
     allure.dynamic.story(descrip['story_name'])
+    
+    allure.dynamic.id(str(uuid.uuid4()))
 
     for case_data in steps:
         with allure.step(case_data['testCase']['case_name']):
