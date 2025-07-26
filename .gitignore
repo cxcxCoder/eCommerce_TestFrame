@@ -1,0 +1,38 @@
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 虚拟环境目录
+venv/
+env/
+testEnv/
+
+
+# 日志文件
+*.log
+logs/
+
+# 测试报告、截图
+reports/
+screenshots/
+
+# VS Code 配置
+.vscode/
+
+# pytest 缓存
+.pytest_cache/
+
+# 缓存文件夹
+.cache/
+
+# 依赖包目录（如果你用 pip 安装第三方包且没上传到仓库）
+site-packages/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 其它忽略文件
+*.bak
+*.swp
