@@ -10,12 +10,14 @@ from conf.configLoader import ConfigLoader
 
 
 global_prec = Precondition()
-
+start_time = None
 
 def pytest_sessionstart(session):
     """
     pytest_sessionstart会话级钩子函数，在 测试运行正式开始之前调用，用于执行一些全局初始化工作，如：清空 extract.yaml，可拓展
     """
+    global start_time
+    start_time = time.time()
     logs.info("*****************************TEST START*****************************")
     if configLoader.IF_BEFORE_CLEAN:
         YamlDataProcess().clean_extract_data()
@@ -80,7 +82,7 @@ def pytest_terminal_summary(terminalreporter, exitstatus, config):
     failed = len(terminalreporter.stats.get('failed', []))
     error = len(terminalreporter.stats.get('error', []))
     skipped = len(terminalreporter.stats.get('skipped', []))
-    duration = time.time() - terminalreporter._sessionstarttime
+    duration = time.time() - start_time
 
     summary = f"""
     自动化测试结果，通知如下，请着重关注测试失败的接口，具体执行结果如下：

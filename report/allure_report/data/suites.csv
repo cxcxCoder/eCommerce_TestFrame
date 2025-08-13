@@ -1,0 +1,246 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","16","无效校验-必须参数goodsId缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","17","有效校验-非必须参数timeStamp缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","17","有效校验-非必须参数timeStamp缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","25","无效提交-必须参数consignee_info全缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","14","无效校验-必须参数orderNumber缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","14","用户名和密码正确登录验证","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","18","无效提交-必须参数number缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","25","有效删除-非必须参数timeStamp缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","24","无效提交-必须参数goods_id缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","14","有效获取-缺少非必须参数size","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","17","无效校验-必须参数count缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","17","无效获取-必须参数pro_id缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","26","无效校验-必须参数orderNumber缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","13","无效校验-订单号不存在","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","29","正常校验已发货订单状态","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","18","有效获取-非必须参数size缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","22","正常获取商品列表","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","16","无效删除-必须参数productId错误","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","16","无效提交-必须参数inviter_id缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","15","无效删除-必须参数productId缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","26","正常获取商品列表","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","28","正常添加商品","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","19","有效校验-非必须参数timeStamp缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","17","有效添加-缺少非必须参数timeStamp","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","28","无效添加-缺少必须参数price","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","26","无效提交-必须参数propertyChildIds缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","17","正常支付订单","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","18","有效获取-非必须参数page缺失","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","28","正常删除商品","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","26","无效提交-必须参数consignee_info元素缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","17","无效添加-缺少必须参数goods_id","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","22","正常校验商品库存","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","19","无效获取-必须参数pro_id不存在","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","16","无效支付-必须参数userId错误","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","18","有效支付-非必须参数timeStamp缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","15","无效添加-必须参数goods_id错误","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","15","无效支付-必须参数orderNumber错误","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","14","无效获取-缺少必须参数msgType","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","17","正常提交订单","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","16","正常校验已支付订单状态","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    流程测试入口,只需要载入数据,也可以进行简单前置处理,内部逐步执行测试步骤
+    params:
+    - workflow_case_data: 流程测试用例数据,包含多个步骤
+    ","46","test_workflow[workflow_case_data0]","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","16","无效支付-必须参数orderNumber缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","14","无效校验-订单号不存在","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","16","无效支付-必须参数userId缺失","testcases","Wed Aug 13 18:28:37 CST 2025","passed","Wed Aug 13 18:28:37 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","18","无效添加-缺少必须参数count","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","26","有效获取-缺少非必须参数page","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","18","有效校验-库存不足","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","16","无效校验-不存在对应商品","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""
+"
+    单接口测试入口,由pytest_generate_tests载入数据,pytest_runtest_setup处理前置条件,保证独立性
+    params:
+    - single_case_data: 一组单接口的测试用例数据
+    ","15","无效获取-msgType参数错误","testcases","Wed Aug 13 18:28:36 CST 2025","passed","Wed Aug 13 18:28:36 CST 2025","","test_entry","",""

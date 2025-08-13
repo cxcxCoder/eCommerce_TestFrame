@@ -1,0 +1,7 @@
+{
+  "params": {
+    "msgType": "getAAA",
+    "page": 1,
+    "size": 20
+  }
+}

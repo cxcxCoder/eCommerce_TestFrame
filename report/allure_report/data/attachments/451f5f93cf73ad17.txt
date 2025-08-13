@@ -1,0 +1,13 @@
+[32mINFO    [0m utils.recordlogs:conftest.py:10 ********************用例开始********************
+[32mINFO    [0m utils.recordlogs:apiclient.py:72 接口名称：用户登录
+[32mINFO    [0m utils.recordlogs:apiclient.py:73 接口地址： http://127.0.0.1:8181//dar/user/login
+[32mINFO    [0m utils.recordlogs:apiclient.py:74 接口方法：post
+[32mINFO    [0m utils.recordlogs:apiclient.py:75 请求头：{'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'}
+[32mINFO    [0m utils.recordlogs:apiclient.py:76 用例名称：用户名和密码正确登录验证
+[32mINFO    [0m utils.recordlogs:apiclient.py:85 请求参数：{'data': {'user_name': 'test01', 'passwd': 'admin123'}}
+[32mINFO    [0m werkzeug:_internal.py:97 127.0.0.1 - - [13/Aug/2025 18:28:36] "POST /dar/user/login HTTP/1.1" 200 -
+[32mINFO    [0m utils.recordlogs:readyaml.py:95 d:\MyCode\learn_Test\eCommerce_apitestV3\extract.yaml写入数据: 【{'token': '13Db9f9f2A0Bf0ee583AB3E51a7eF'}】
+[32mINFO    [0m utils.recordlogs:assertions.py:83 ✅包含断言**通过**，【error_code】预期值：【None】,实际值：【None】
+[32mINFO    [0m utils.recordlogs:assertions.py:129 ✅相等断言**通过**，【msg】预期值：【登录成功】,实际值：【登录成功】
+[32mINFO    [0m utils.recordlogs:requestBase.py:112 用例【用户登录--用户名和密码正确登录验证】执行成功✅✅✅✅✅✅✅✅✅✅
+[32mINFO    [0m utils.recordlogs:conftest.py:12 ********************用例结束********************

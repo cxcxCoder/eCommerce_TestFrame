@@ -1,0 +1,14 @@
+[32mINFO    [0m utils.recordlogs:conftest.py:10 ********************用例开始********************
+[32mINFO    [0m utils.recordlogs:requestBase.py:52 【${get_extract_data('goodsList',0)}】替换称为【56996760797】
+[32mINFO    [0m utils.recordlogs:apiclient.py:72 接口名称：提交订单接口
+[32mINFO    [0m utils.recordlogs:apiclient.py:73 接口地址： http://127.0.0.1:8181//coupApply/cms/placeAnOrder
+[32mINFO    [0m utils.recordlogs:apiclient.py:74 接口方法：POST
+[32mINFO    [0m utils.recordlogs:apiclient.py:75 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+[32mINFO    [0m utils.recordlogs:apiclient.py:76 用例名称：无效提交-必须参数propertyChildIds缺失
+[32mINFO    [0m utils.recordlogs:apiclient.py:85 请求参数：{'json': {'goods_id': '56996760797', 'number': 2, 'inviter_id': 127839112, 'price': '128', 'freight_insurance': '0.00', 'discount_code': '002399', 'consignee_info': {'name': '张三', 'phone': 13800000000, 'address': '北京市海淀区西三环北路74号院4栋3单元1008'}}}
+[32mINFO    [0m werkzeug:_internal.py:97 127.0.0.1 - - [13/Aug/2025 18:28:37] "POST /coupApply/cms/placeAnOrder HTTP/1.1" 200 -
+[32mINFO    [0m utils.recordlogs:assertions.py:39 ✅http状态码断言**通过**，预期状态码：【200】,实际状态码：【200】
+[32mINFO    [0m utils.recordlogs:assertions.py:172 ✅不等断言**通过**，【error】预期值：【None】,实际值：【参数错误或必填参数为空】
+[32mINFO    [0m utils.recordlogs:assertions.py:129 ✅相等断言**通过**，【error_code】预期值：【9001】,实际值：【9001】
+[32mINFO    [0m utils.recordlogs:requestBase.py:112 用例【提交订单接口--无效提交-必须参数propertyChildIds缺失】执行成功✅✅✅✅✅✅✅✅✅✅
+[32mINFO    [0m utils.recordlogs:conftest.py:12 ********************用例结束********************

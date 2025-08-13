@@ -46,7 +46,7 @@ class ApiClient:
         实际请求函数，可以进行session管理
         """
         try:
-            response = requests.session.request(**kwargs)
+            response = self.session.request(**kwargs)
         except Timeout:
             logs.error('请求超时--Timeout')
         except ConnectionError:

@@ -1,0 +1,34 @@
+{
+  "cartList": [
+    {
+      "cid": 678,
+      "price": "99.00",
+      "productId": "18382788819",
+      "productImage": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/bcf848aa71c6389607ae7a84b70f1543.jpeg",
+      "productName": "【2件套】套装秋冬新款仿獭兔毛钉珠皮草毛毛短外套加厚大衣女装",
+      "totalPrice": "239.00"
+    },
+    {
+      "cid": 465,
+      "price": "108.00",
+      "productId": "33809635011",
+      "productImage": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/bcf848aa71c6389607ae7a84b70f1543.jpeg",
+      "productName": "好奇小森林心钻装纸尿裤M22拉拉裤L18/XL14超薄透气裤型尿不湿 1件装",
+      "totalPrice": "347.00"
+    },
+    {
+      "cid": 101,
+      "price": "17.80",
+      "productId": "56996760797",
+      "productImage": "https://omsproductionimg.yangkeduo.com/images/2017-12-12/efb5db42397550bffd3211ca6f197498.jpeg",
+      "productName": "冻干鸡小胸整块增肥营养发腮狗狗零食新手养猫零食幼猫零食100g",
+      "totalPrice": "364.80"
+    }
+  ],
+  "createTime": "2025-08-13 18:28:36",
+  "error": "",
+  "error_code": "0000",
+  "message": "success",
+  "translate_language": "zh-CN",
+  "userId": "4985173412817324110"
+}

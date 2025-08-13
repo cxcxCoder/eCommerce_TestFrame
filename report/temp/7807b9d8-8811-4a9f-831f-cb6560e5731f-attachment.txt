@@ -1,0 +1,19 @@
+[32mINFO    [0m utils.recordlogs:conftest.py:61 //////////////////开始执行前置条件//////////////////
+[32mINFO    [0m utils.recordlogs:precondition.py:64 执行前置条件:placeAnOrder
+[32mINFO    [0m utils.recordlogs:readyaml.py:95 d:\MyCode\learn_Test\eCommerce_apitestV3\extract.yaml写入数据: 【{'orderNumber': '902966243710017964735'}】
+[32mINFO    [0m utils.recordlogs:readyaml.py:95 d:\MyCode\learn_Test\eCommerce_apitestV3\extract.yaml写入数据: 【{'userId': '4985173412817324110'}】
+[32mINFO    [0m utils.recordlogs:conftest.py:10 ********************用例开始********************
+[32mINFO    [0m utils.recordlogs:requestBase.py:52 【${get_extract_data('orderNumber')}】替换称为【902966243710017964735】
+[32mINFO    [0m utils.recordlogs:requestBase.py:52 【${get_extract_data('userId')}】替换称为【4985173412817324110】
+[32mINFO    [0m utils.recordlogs:apiclient.py:72 接口名称：订单支付接口
+[32mINFO    [0m utils.recordlogs:apiclient.py:73 接口地址： http://127.0.0.1:8181//coupApply/cms/orderPay
+[32mINFO    [0m utils.recordlogs:apiclient.py:74 接口方法：POST
+[32mINFO    [0m utils.recordlogs:apiclient.py:75 请求头：{'Content-Type': 'application/json;charset=UTF-8'}
+[32mINFO    [0m utils.recordlogs:apiclient.py:76 用例名称：正常支付订单
+[32mINFO    [0m utils.recordlogs:apiclient.py:85 请求参数：{'json': {'orderNumber': '902966243710017964735', 'userId': '4985173412817324110', 'timeStamp': 169232689}}
+[32mINFO    [0m werkzeug:_internal.py:97 127.0.0.1 - - [13/Aug/2025 18:28:37] "POST /coupApply/cms/orderPay HTTP/1.1" 200 -
+[32mINFO    [0m utils.recordlogs:assertions.py:39 ✅http状态码断言**通过**，预期状态码：【200】,实际状态码：【200】
+[32mINFO    [0m utils.recordlogs:assertions.py:129 ✅相等断言**通过**，【error】预期值：【None】,实际值：【】
+[32mINFO    [0m utils.recordlogs:assertions.py:129 ✅相等断言**通过**，【error_code】预期值：【0000】,实际值：【0000】
+[32mINFO    [0m utils.recordlogs:requestBase.py:112 用例【订单支付接口--正常支付订单】执行成功✅✅✅✅✅✅✅✅✅✅
+[32mINFO    [0m utils.recordlogs:conftest.py:12 ********************用例结束********************

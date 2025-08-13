@@ -1,0 +1,7 @@
+{
+  "params": {
+    "msgType": "getHandsetListOfCust",
+    "page": 1,
+    "size": 20
+  }
+}
